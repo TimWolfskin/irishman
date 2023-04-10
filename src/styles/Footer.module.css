@@ -32,7 +32,7 @@
   .socials svg {
     width: 24px;
     height: 24px;
-    fill: var(--dark-sea);
+    fill: var(--green);
   }
   
   .socials svg:hover {
