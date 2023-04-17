@@ -1,5 +1,5 @@
 body {
-    background: var(--bg);
+    background: var(--white);
     font-size: 16px;
     line-height: 16px;
     font-family: Montserrat, Roboto, sans-serif;
@@ -75,8 +75,8 @@ body {
   }
   
   .container {
-    width: 1290px;
-    padding: 0 5px;
+    width: 1440px;
+    padding: 0 10px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -84,8 +84,8 @@ body {
   }
   
   section {
-    background: var(--dark);
-    border-radius: 6px;
+    /* background: var(--dark);
+    border-radius: 6px; */
   }
   
   button {

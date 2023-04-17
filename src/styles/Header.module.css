@@ -4,6 +4,7 @@
     align-items: center;
     padding: 25px 20px;
     background-color: var(--green-dark);
+    margin-bottom: 50px;
   }
   
   .logo {

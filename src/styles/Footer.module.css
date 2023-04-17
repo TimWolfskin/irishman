@@ -4,6 +4,7 @@
     justify-content: space-between;
     margin-top: 20px;
     padding: 24px;
+    background: var(--green-dark);
   }
   
   .logo {

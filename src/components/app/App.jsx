@@ -7,6 +7,7 @@ import Footer from "../footer/Footer";
 import Sidebar from "../sidebar/Sidebar";
 import { getCategories } from "../../features/categories/categoriesSlice";
 import { getProducts } from "../../features/products/productsSlice";
+import UserForm from "../user/UserForm";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
+      <UserForm />
       <div className="container">
         <Sidebar />
         <AppRoutes />
