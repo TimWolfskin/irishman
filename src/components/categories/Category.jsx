@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-//import { useGetProductsQuery } from "../../features/api/apiSlice";
-import { useGetProductQuery } from "../../features/api/apiSlice";
+import { useGetProductsQuery } from "../../features/api/apiSlice";
+
 import styles from "../../styles/Category.module.css";
 
 import Products from "../products/Products";
@@ -31,7 +31,7 @@ const Category = () => {
   const [values, setValues] = useState(defaultValues);
   const [params, setParams] = useState(defaultParams);
 
-  const { data = [], isLoading, isSuccess } = useGetProductQuery(params);
+  const { data = [], isLoading, isSuccess } = useGetProductsQuery(params);
 
   useEffect(() => {
     if (!id) return;
