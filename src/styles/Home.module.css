@@ -5,8 +5,8 @@
   }
   
   .title {
-    font-weight: 900;
-    font-size: 119px;
+    font-weight: 700;
+    font-size: 108px;
     line-height: 145px;
     text-transform: uppercase;
     color: var(--bg);
@@ -45,9 +45,10 @@
   
   .image img {
     position: absolute;
-    bottom: -15%;
-    right: 10%;
+    bottom: -40%;
+    right: -16%;
     max-width: unset;
+    width: 600px;
   }
   
   .banner {

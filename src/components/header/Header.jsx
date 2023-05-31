@@ -15,18 +15,15 @@ import { toggleForm } from "../../features/user/userSlice";
 import { useGetProductsQuery } from "../../features/api/apiSlice";
 
 const Header = () => {
-  const currentUser = useSelector(({ user }) => user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const [searchValue, setSearchValue] = useState("");
+  const { currentUser, cart } = useSelector(({ user }) => user);
+
   const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
 
   const { data, isLoading } = useGetProductsQuery({ title: searchValue });
-
-  const handleClick = () => {
-    if (!currentUser) dispatch(toggleForm(true));
-    else navigate(ROUTES.PROFILE);
-  };
 
   useEffect(() => {
     if (!currentUser) return;
@@ -34,9 +31,15 @@ const Header = () => {
     setValues(currentUser);
   }, [currentUser]);
 
+  const handleClick = () => {
+    if (!currentUser) dispatch(toggleForm(true));
+    else navigate(ROUTES.PROFILE);
+  };
+
   const handleSearch = ({ target: { value } }) => {
     setSearchValue(value);
   };
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -54,9 +57,7 @@ const Header = () => {
         </div>
         <form className={styles.form}>
           <div className={styles.icon}>
-            <svg className="icon">
-              <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#search`} />
-            </svg>
+            <SearchOutlinedIcon />
           </div>
           <div className={styles.input}>
             <input
@@ -101,7 +102,9 @@ const Header = () => {
 
           <Link to={ROUTES.CART} className={styles.cart}>
             <ShoppingCartOutlinedIcon />
-            <span className={styles.count}>3</span>
+            {!!cart.length && (
+              <span className={styles.count}>{cart.length}</span>
+            )}
           </Link>
         </div>
       </div>
