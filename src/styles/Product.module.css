@@ -91,7 +91,7 @@
   
   .size:hover,
   .size.active {
-    background: var(--violet);
+    background: var(--green);
   }
   
   .description {
@@ -124,6 +124,14 @@
     line-height: 12px;
     color: var(--dark-sea);
     margin-top: auto;
+  }
+
+  .add {
+    background: var(--bg);
+  }
+
+  .add:hover{
+    background: var(--green);
   }
   
   .add:disabled {
