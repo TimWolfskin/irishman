@@ -43,12 +43,14 @@
   }
   
   .title {
+    color: var(--dark-sea);
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
   }
   
   .price {
+    color: var(--dark-sea);
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
